@@ -111,6 +111,11 @@ class YamlSerializationVisitor extends AbstractVisitor
                 ->rtrim(false)
                 ->writeln(' {}')
             ;
+        } elseif (0 === count($data)) {
+            $this->writer
+                ->rtrim(false)
+                ->writeln(' []')
+            ;
         }
     }
 
